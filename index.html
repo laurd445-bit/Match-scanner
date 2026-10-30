@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match Screenshot Reader</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tesseract.js library for in-browser OCR processing -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Match Fixture Scanner</h2>
+    <p>Upload a screenshot of virtual football fixtures to extract match text.</p>
+    
+    <div class="upload-section">
+      <input type="file" id="imageInput" accept="image/*">
+      <button onclick="processImage()">Scan Screenshot</button>
+    </div>
+
+    <div id="status"></div>
+    
+    <div class="result-box">
+      <h3>Detected Teams & Data:</h3>
+      <pre id="output">No screenshot scanned yet.</pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
